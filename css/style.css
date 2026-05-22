@@ -140,10 +140,14 @@ header .container {
 }
 
 .hero-subtitle {
+  display: block;
   max-width: 1400px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.4rem;
   color: #e3e86f;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   text-align: center;
@@ -477,6 +481,7 @@ footer {
   .hero-subtitle {
     font-size: 0.85rem;
     letter-spacing: 0.14em;
+    margin-bottom: 0.8rem;
   }
 
   .hero-text {
