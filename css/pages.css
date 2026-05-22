@@ -1,0 +1,38 @@
+.lessons-hero {
+  background-image: none;
+}
+
+.reviews-hero {
+  background-image: none;
+}
+
+.contact-hero {
+  background-image: none;
+}
+
+.artworks-hero {
+  background-image: none;
+}
+
+.contact-copy {
+  max-width: 560px;
+}
+
+.contact-copy .feature-list {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .contact-copy {
+    max-width: none;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .lesson-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

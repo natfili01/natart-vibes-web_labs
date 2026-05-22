@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Register for NatArt Vibes music lessons in violin, piano, music history, theory, or RCM exam preparation."
+  />
+  <title>Registration | NatArt Vibes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="inner-page">
+  <header>
+    <div class="container">
+      <div class="site-header">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="NatArt Vibes Logo" />
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          Menu
+        </button>
+
+        <nav aria-label="Main navigation">
+          <ul class="nav-list" id="main-navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="artworks.html">Artworks</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contacts.html">Registration</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero contact-hero">
+      <div class="container">
+        <h1>Lesson Registration</h1>
+        <p class="hero-text">
+          Share a little about the student and their musical goals, and NatArt
+          Vibes will follow up with the next step.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <h2>Register for Lessons</h2>
+          <p>
+            Use the registration form for violin, piano, music history, music
+            theory, or RCM prep lessons. All registration emails are sent to
+            natartvibes@gmail.com.
+          </p>
+          <ul class="feature-list">
+            <li>Student age and experience level</li>
+            <li>Preferred lesson interest, duration, and service length</li>
+            <li>Requests for a free 15-minute trial lesson</li>
+            <li>Calculated payment amount before registration is submitted</li>
+            <li>Preferred payment method</li>
+            <li>Performance or RCM exam preparation goals</li>
+          </ul>
+        </div>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xwvzojdn"
+          method="post"
+        >
+          <div class="form-status" role="status" aria-live="polite"></div>
+          <input type="hidden" name="_subject" value="NatArt Vibes lesson registration" />
+          <input type="hidden" name="calculatedPayment" class="calculated-payment-input" value="" />
+
+          <div class="form-field">
+            <label for="student-name">Student Name</label>
+            <input id="student-name" name="studentName" type="text" autocomplete="name" required minlength="3" />
+            <span class="error-message">Please enter at least 3 characters.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="guardian-name">Parent / Guardian Name</label>
+            <input id="guardian-name" name="guardianName" type="text" autocomplete="name" required minlength="3" />
+            <span class="error-message">Please enter at least 3 characters.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <span class="error-message">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required minlength="7" />
+            <span class="error-message">Please enter a phone number.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="age">Student Age</label>
+            <input id="age" name="age" type="number" min="3" max="100" required />
+            <span class="error-message">Please enter the student's age.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="lesson">Lesson Interest</label>
+            <select id="lesson" name="lesson" required>
+              <option value="">Choose a lesson</option>
+              <option value="violin">Violin</option>
+              <option value="piano">Piano</option>
+              <option value="history">Music History</option>
+              <option value="theory-rcm">Music Theory / RCM Prep</option>
+            </select>
+            <span class="error-message">Please choose a lesson type.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="experience">Experience Level</label>
+            <select id="experience" name="experience" required>
+              <option value="">Choose experience level</option>
+              <option value="beginner">Beginner</option>
+              <option value="some-experience">Some experience</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+            <span class="error-message">Please choose an experience level.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="lesson-duration">Preferred Lesson Duration</label>
+            <select id="lesson-duration" name="lessonDuration" required>
+              <option value="">Choose lesson duration</option>
+              <option value="15-minute-free-trial">15-minute free trial lesson</option>
+              <option value="30-minutes">30 minutes</option>
+              <option value="45-minutes">45 minutes</option>
+              <option value="60-minutes">60 minutes</option>
+            </select>
+            <span class="error-message">Please choose a lesson duration.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="service-length">Requested Service Length</label>
+            <select id="service-length" name="serviceLength" required>
+              <option value="">Choose service length</option>
+              <option value="trial-lesson">Trial lesson</option>
+              <option value="one-month">One month</option>
+              <option value="three-months">3 months</option>
+              <option value="fall-semester-four-months">Fall semester / 4 months</option>
+              <option value="spring-semester-six-months">Spring semester / 6 months</option>
+              <option value="summer-two-months">Summer / 2 months</option>
+              <option value="one-year">One year</option>
+            </select>
+            <span class="error-message">Please choose the requested service length.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="payment-method">Preferred Payment Method</label>
+            <select id="payment-method" name="paymentMethod" required>
+              <option value="">Choose payment method</option>
+              <option value="free">Free trial lesson</option>
+              <option value="e-transfer">E-transfer</option>
+              <option value="credit-card">Credit card</option>
+            </select>
+            <span class="error-message">Please choose a payment method.</span>
+          </div>
+
+          <div class="payment-summary" aria-live="polite">
+            <h3>Payment Summary</h3>
+            <p class="payment-summary-text">
+              Choose a lesson duration and service length to calculate the payment amount.
+            </p>
+          </div>
+
+          <div class="form-field payment-confirmation">
+            <label>
+              <input id="payment-confirmed" name="paymentConfirmed" type="checkbox" required />
+              I understand that payment is required to finish registration, except for a free trial lesson.
+            </label>
+            <span class="error-message">Please confirm the payment requirement.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Goals / Notes</label>
+            <textarea id="message" name="message" rows="6" required minlength="10"></textarea>
+            <span class="error-message">Please write at least 10 characters.</span>
+          </div>
+
+          <button class="btn" type="submit">Submit Registration</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 NatArt Vibes. All rights reserved. <span class="current-date"></span></p>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
