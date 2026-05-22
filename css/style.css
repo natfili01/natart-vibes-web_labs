@@ -147,6 +147,8 @@ header .container {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   text-align: center;
+  position: static;
+  top: auto;
 }
 
 .hero h1 {
