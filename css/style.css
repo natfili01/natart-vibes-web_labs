@@ -406,11 +406,22 @@ footer {
     gap: 1rem;
   }
 
+  .menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
   .nav-list {
+    display: none;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.7rem 1.2rem;
     margin-top: 0;
+  }
+
+  .nav-list.is-open {
+    display: flex;
   }
 
   .logo img {
@@ -420,9 +431,7 @@ footer {
   .hero {
     min-height: 100vh;
     padding: 12rem 0 5rem;
-    background-image: url("../hero.jpeg");
-    background-size: 100% auto;
-    background-position: center 50%;
+    background-image: none;
     background-color: transparent;
   }
 
@@ -461,6 +470,11 @@ footer {
   .intro .container,
   .why-choose-us,
   .home-highlights,
+  .highlight-card,
+  .why-card,
+  .content-section,
+  .soft-section,
+  .page-hero,
   .about-page .intro,
   .about-page .intro .container,
   .about-page .about-story,
@@ -502,6 +516,11 @@ footer {
   .nav-list {
     max-width: none;
     gap: 0.45rem 0.75rem;
+  }
+
+  .nav-list.is-open {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .nav-list a {
