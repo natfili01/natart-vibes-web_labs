@@ -73,6 +73,12 @@
 }
 
 @media (max-width: 900px) {
+  .page-hero,
+  .content-section,
+  .soft-section {
+    background-color: transparent;
+  }
+
   .page-hero {
     padding: 2rem 0 3rem;
   }

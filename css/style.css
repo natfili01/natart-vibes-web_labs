@@ -382,6 +382,17 @@ footer {
 }
 
 @media (max-width: 900px) {
+  body,
+  body.about-page,
+  body.inner-page {
+    background-color: #e3e86f;
+    background-image: url("../hero.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   header {
     position: absolute;
     background-color: transparent;
@@ -409,8 +420,10 @@ footer {
   .hero {
     min-height: 100vh;
     padding: 12rem 0 5rem;
+    background-image: url("../hero.jpeg");
     background-size: 100% auto;
     background-position: center 50%;
+    background-color: transparent;
   }
 
   .hero .container {
@@ -442,6 +455,20 @@ footer {
   .why-grid,
   .home-highlights .container {
     grid-template-columns: 1fr;
+  }
+
+  .intro,
+  .intro .container,
+  .why-choose-us,
+  .home-highlights,
+  .about-page .intro,
+  .about-page .intro .container,
+  .about-page .about-story,
+  .about-page .about-feature,
+  .about-page .about-gallery,
+  .about-page .about-links,
+  .about-page .about-highlights {
+    background-color: transparent;
   }
 
   .intro h2 {
@@ -890,6 +917,23 @@ footer {
   .about-page header,
   .inner-page header {
     background-color: transparent;
+  }
+
+  .about-page .menu-toggle,
+  .inner-page .menu-toggle {
+    border-color: #e3e86f;
+    color: #e3e86f;
+  }
+
+  .about-page .nav-list a,
+  .about-page .nav-list a:hover,
+  .about-page .nav-list a:focus-visible,
+  .about-page .nav-list a:active,
+  .inner-page .nav-list a,
+  .inner-page .nav-list a:hover,
+  .inner-page .nav-list a:focus-visible,
+  .inner-page .nav-list a:active {
+    color: #e3e86f;
   }
 
   .about-hero {
