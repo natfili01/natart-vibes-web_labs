@@ -383,8 +383,8 @@ footer {
 
 @media (max-width: 900px) {
   header {
-    position: absolute;
-    background-color: transparent;
+    position: static;
+    background-color: #e3e86f;
     padding: 0.75rem 0;
   }
 
@@ -402,19 +402,28 @@ footer {
     margin-top: 0;
   }
 
+  .nav-list a,
+  .nav-list a:hover,
+  .nav-list a:focus-visible,
+  .nav-list a.js-nav-hover {
+    color: #5a2a57;
+    background-image: none;
+    box-shadow: none;
+  }
+
   .logo img {
     width: 180px;
   }
 
   .hero {
     min-height: 100vh;
-    padding: 12rem 0 5rem;
+    padding: 7rem 0 5rem;
     background-size: 100% auto;
     background-position: center 50%;
   }
 
   .hero .container {
-    top: -60px;
+    top: -30px;
     text-align: center;
   }
 
@@ -887,6 +896,11 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .about-page header,
+  .inner-page header {
+    background-color: #e3e86f;
+  }
+
   .about-hero {
     padding: 1.5rem 0 1rem;
     background-position: center top;
