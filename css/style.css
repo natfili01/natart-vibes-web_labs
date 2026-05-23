@@ -381,11 +381,11 @@ footer {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   body,
   body.about-page,
   body.inner-page {
-    background-color: #e3e86f;
+    background-color: #000000;
     background-image: url("../hero.jpeg");
     background-size: cover;
     background-position: center center;
@@ -913,7 +913,7 @@ footer {
   transform: translateY(-1px);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .about-page header,
   .inner-page header {
     background-color: transparent;
