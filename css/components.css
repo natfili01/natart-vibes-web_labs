@@ -231,7 +231,9 @@
 
 @media (max-width: 900px) {
   .menu-toggle {
-    display: none;
+    display: inline-flex;
+    margin-left: auto;
+    background-color: transparent;
   }
 
   .site-header {
@@ -239,9 +241,10 @@
   }
 
   .nav-list {
-    display: flex;
-    width: auto;
-    padding-top: 0;
+    display: none;
+    width: 100%;
+    padding-top: 0.35rem;
+    background-color: transparent;
   }
 
   .nav-list.is-open {
@@ -255,12 +258,17 @@
 }
 
 @media (max-width: 600px) {
+  .menu-toggle {
+    width: 100%;
+  }
+
   .nav-list.is-open {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .nav-list a {
-    width: auto;
+    width: 100%;
     line-height: 1.2;
   }
 
