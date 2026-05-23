@@ -73,17 +73,6 @@
 }
 
 @media (max-width: 900px) {
-  .inner-page .nav-list a,
-  .about-page .nav-list a {
-    color: #e3e86f;
-  }
-
-  .inner-page .menu-toggle,
-  .about-page .menu-toggle {
-    border-color: #e3e86f;
-    color: #e3e86f;
-  }
-
   .page-hero {
     padding: 2rem 0 3rem;
   }
