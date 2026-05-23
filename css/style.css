@@ -383,8 +383,8 @@ footer {
 
 @media (max-width: 900px) {
   header {
-    position: absolute;
-    background-color: transparent;
+    position: static;
+    background-color: #e3e86f;
     padding: 0.75rem 0;
   }
 
@@ -402,19 +402,28 @@ footer {
     margin-top: 0;
   }
 
+  .nav-list a {
+    color: #5a2a57;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus-visible {
+    color: #5a2a57;
+  }
+
   .logo img {
     width: 180px;
   }
 
   .hero {
     min-height: 100vh;
-    padding: 12rem 0 5rem;
+    padding: 7rem 0 5rem;
     background-size: cover;
     background-position: center center;
   }
 
   .hero .container {
-    top: -60px;
+    top: -30px;
     text-align: center;
   }
 
