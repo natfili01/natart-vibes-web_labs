@@ -233,9 +233,7 @@
   .menu-toggle {
     display: inline-flex;
     margin-left: auto;
-    border-color: #5a2a57;
-    background-color: #e3e86f;
-    color: #5a2a57;
+    background-color: transparent;
   }
 
   .site-header {
@@ -246,7 +244,7 @@
     display: none;
     width: 100%;
     padding-top: 0.35rem;
-    background-color: #e3e86f;
+    background-color: transparent;
   }
 
   .nav-list.is-open {

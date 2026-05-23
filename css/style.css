@@ -376,15 +376,15 @@ footer {
   }
 
   .hero {
-    background-size: cover;
-    background-position: center center;
+    background-size: 100% auto;
+    background-position: center 50%;
   }
 }
 
 @media (max-width: 900px) {
   header {
-    position: static;
-    background-color: #e3e86f;
+    position: absolute;
+    background-color: transparent;
     padding: 0.75rem 0;
   }
 
@@ -402,28 +402,19 @@ footer {
     margin-top: 0;
   }
 
-  .nav-list a {
-    color: #5a2a57;
-  }
-
-  .nav-list a:hover,
-  .nav-list a:focus-visible {
-    color: #5a2a57;
-  }
-
   .logo img {
     width: 180px;
   }
 
   .hero {
     min-height: 100vh;
-    padding: 7rem 0 5rem;
-    background-size: cover;
-    background-position: center center;
+    padding: 12rem 0 5rem;
+    background-size: 100% auto;
+    background-position: center 50%;
   }
 
   .hero .container {
-    top: -30px;
+    top: -60px;
     text-align: center;
   }
 
@@ -533,7 +524,6 @@ footer {
 }
 .about-page {
   --about-text-color: #5a2a57;
-  --about-text-hover: #341c33;
   background-color: #e3e86f;
   background-image: url("../images/about/about_background.jpg");
   background-size: cover;
@@ -955,10 +945,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .about-page {
-    background-attachment: scroll;
-  }
-
   .about-story,
   .about-feature,
   .about-gallery,

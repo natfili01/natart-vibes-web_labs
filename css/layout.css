@@ -84,10 +84,6 @@
 }
 
 @media (max-width: 600px) {
-  .inner-page {
-    background-attachment: scroll;
-  }
-
   .page-hero {
     padding: 1.5rem 0 2rem;
   }
