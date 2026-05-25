@@ -682,7 +682,7 @@ footer {
 }
 
 .about-page .menu-toggle {
-  color: #e3e86f;
+  color: #5a2a57;
 }
 
 .about-page .menu-toggle[aria-expanded="true"],
@@ -1069,7 +1069,7 @@ footer {
   .inner-page .menu-toggle {
     border-color: currentColor;
     background-color: transparent;
-    color: #e3e86f;
+    color: #5a2a57;
   }
 
   .about-page .menu-toggle[aria-expanded="true"],
