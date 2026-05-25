@@ -19,8 +19,15 @@ applyFontSize();
 if (menuToggle && navList) {
   menuToggle.addEventListener("click", () => {
     const isOpen = navList.classList.toggle("is-open");
+    const menuToggleLabel = menuToggle.querySelector(".menu-toggle-label");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.textContent = isOpen ? "Close" : "Menu";
+    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+
+    if (menuToggleLabel) {
+      menuToggleLabel.textContent = isOpen ? "Close" : "Menu";
+    } else {
+      menuToggle.textContent = isOpen ? "Close" : "Menu";
+    }
   });
 }
 

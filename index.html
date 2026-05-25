@@ -8,9 +8,9 @@
     content="NatArt Vibes is a boutique music studio offering violin, piano, and music history lessons."
   />
   <title>NatArt Vibes | Home</title>
-  <link rel="stylesheet" href="css/style.css?v=20260522m" />
+  <link rel="stylesheet" href="css/style.css?v=20260524e" />
 </head>
-<body>
+<body class="home-page">
   <header>
     <div class="container">
       <div class="site-header">
@@ -18,8 +18,13 @@
           <img src="images/logo.png" alt="NatArt Vibes Logo" />
         </a>
 
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
-          Menu
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Open menu">
+          <span class="menu-toggle-label">Menu</span>
+          <span class="menu-toggle-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </button>
 
         <nav aria-label="Main navigation">
@@ -150,6 +155,6 @@
     </div>
   </footer>
 
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js?v=20260524a"></script>
 </body>
 </html>
