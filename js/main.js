@@ -6,6 +6,7 @@ const showMoreButton = document.querySelector(".show-more-btn");
 const contactForm = document.querySelector(".contact-form");
 const paymentSummaryText = document.querySelector(".payment-summary-text");
 const calculatedPaymentInput = document.querySelector(".calculated-payment-input");
+const stripePaymentLink = document.querySelector(".stripe-payment-link");
 
 let pageFontSize = Number(localStorage.getItem("pageFontSize")) || 100;
 
@@ -96,6 +97,12 @@ const monthlyLessonFees = {
   "60-minutes": 360,
 };
 
+const stripePaymentLinks = {
+  "30-minutes": "https://buy.stripe.com/dRm14n2jM3eX4ER0OgdIA00",
+  "45-minutes": "https://buy.stripe.com/14A3cv3nQaHpdbndB2dIA01",
+  "60-minutes": "https://buy.stripe.com/aFabJ1gac9D12wJdCwYdIA02",
+};
+
 const serviceLengthMultipliers = {
   "one-month": 1,
   "three-months": 3,
@@ -157,9 +164,20 @@ const updatePaymentSummary = () => {
     return;
   }
 
-  const payment = calculatePayment(new FormData(contactForm));
+  const formData = new FormData(contactForm);
+  const payment = calculatePayment(formData);
+  const lessonDuration = getFormValue(formData, "lessonDuration");
+  const paymentMethod = getFormValue(formData, "paymentMethod");
+  const stripeUrl = stripePaymentLinks[lessonDuration] || "";
+
   paymentSummaryText.textContent = payment.text;
   calculatedPaymentInput.value = payment.amount === null ? "" : `$${payment.amount}`;
+
+  if (stripePaymentLink) {
+    const shouldShowStripeLink = payment.amount > 0 && paymentMethod === "credit-card" && Boolean(stripeUrl);
+    stripePaymentLink.hidden = !shouldShowStripeLink;
+    stripePaymentLink.href = shouldShowStripeLink ? stripeUrl : "#";
+  }
 };
 
 const validateContactForm = (formData) => {

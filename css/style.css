@@ -1373,4 +1373,10 @@ footer {
   .lessons-page .lesson-table th {
     background-color: rgba(255, 255, 255, 0.54);
   }
+
+  .registration-page .stripe-payment-link,
+  .registration-page .stripe-payment-link:visited {
+    background-color: #5a2a57 !important;
+    color: #e3e86f !important;
+  }
 }
