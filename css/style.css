@@ -1304,3 +1304,48 @@ footer {
     box-shadow: none !important;
   }
 }
+
+@media (max-width: 1100px) {
+  .about-page,
+  .about-page header,
+  .about-page header *,
+  .about-page header *::before,
+  .about-page header *::after,
+  .about-page main,
+  .about-page main *,
+  .about-page main *::before,
+  .about-page main *::after,
+  .lessons-page,
+  .lessons-page header,
+  .lessons-page header *,
+  .lessons-page header *::before,
+  .lessons-page header *::after,
+  .lessons-page main,
+  .lessons-page main *,
+  .lessons-page main *::before,
+  .lessons-page main *::after,
+  .artworks-page,
+  .artworks-page header,
+  .artworks-page header *,
+  .artworks-page header *::before,
+  .artworks-page header *::after,
+  .artworks-page main,
+  .artworks-page main *,
+  .artworks-page main *::before,
+  .artworks-page main *::after,
+  .registration-page,
+  .registration-page header,
+  .registration-page header *,
+  .registration-page header *::before,
+  .registration-page header *::after,
+  .registration-page main,
+  .registration-page main *,
+  .registration-page main *::before,
+  .registration-page main *::after {
+    color: #5a2a57 !important;
+  }
+
+  .lessons-page .lesson-table th {
+    background-color: rgba(255, 255, 255, 0.54);
+  }
+}
