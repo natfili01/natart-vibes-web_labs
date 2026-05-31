@@ -120,66 +120,9 @@ header .container {
   color: #e3e86f;
 }
 
-.site-header {
-  position: relative;
-}
-
 .menu-toggle {
-  display: inline-flex;
-  margin-left: auto;
-}
-
-.home-page .menu-toggle[aria-expanded="false"] {
-  border-color: #e3e86f;
-  background-color: #e3e86f;
-  background-image: none;
-  box-shadow: none;
-  color: #3f2340;
-}
-
-.site-header nav {
-  position: absolute;
-  top: calc(100% + 0.9rem);
-  right: 0;
-}
-
-.nav-list {
   display: none;
-  width: min(280px, calc(100vw - 3rem));
-  margin-top: 0;
-  padding: 0.7rem;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.2rem;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.nav-list a {
-  color: #e3e86f;
-}
-
-.nav-list.is-open {
-  display: flex;
-}
-
-.nav-list.is-open a {
-  border-radius: 999px;
-  color: #e3e86f;
-  background-image: linear-gradient(
-    to top,
-    rgba(79, 43, 76, 0.94) 0%,
-    rgba(79, 43, 76, 0.68) 56%,
-    rgba(79, 43, 76, 0.18) 100%
-  );
-  box-shadow: inset 0 -3px 0 #e3e86f;
-}
-
-.nav-list a {
-  width: 100%;
-  padding: 0.75rem 0.9rem;
+  margin-left: auto;
 }
 
 /* Hero */
@@ -1197,5 +1140,67 @@ footer {
 
   .teaching-images {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Keep navigation links visible on every page; no burger menu. */
+.menu-toggle,
+.home-page .menu-toggle,
+.about-page .menu-toggle,
+.inner-page .menu-toggle {
+  display: none !important;
+}
+
+.site-header nav {
+  position: static;
+  margin-left: auto;
+}
+
+.nav-list,
+.nav-list.is-open,
+.about-page .nav-list,
+.about-page .nav-list.is-open,
+.inner-page .nav-list,
+.inner-page .nav-list.is-open {
+  display: flex !important;
+  width: auto;
+  max-width: none;
+  padding: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(0.45rem, 1.4vw, 1.2rem);
+}
+
+.nav-list a,
+.nav-list.is-open a {
+  width: auto;
+  padding: 0.65rem 0.65rem 0.75rem;
+}
+
+@media (max-width: 1100px) {
+  .site-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-header nav {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .nav-list,
+  .nav-list.is-open {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-list,
+  .nav-list.is-open {
+    display: flex !important;
+    grid-template-columns: none;
+    gap: 0.45rem 0.75rem;
   }
 }
