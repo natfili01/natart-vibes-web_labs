@@ -457,6 +457,7 @@ footer {
 }
 
 @media (max-width: 1100px) {
+  body,
   body.about-page,
   body.inner-page {
     background-color: #000000;
@@ -522,17 +523,14 @@ footer {
   }
 
   .hero {
-    min-height: auto;
-    padding: 13.5rem 0 4.5rem;
-    background-image: url("../hero.jpeg");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 12rem 0 5rem;
+    background-image: none;
     background-color: transparent;
   }
 
   .hero .container {
-    top: 0;
+    top: -60px;
     text-align: center;
   }
 
@@ -581,17 +579,6 @@ footer {
     background-color: transparent;
   }
 
-  .home-page .intro {
-    margin-top: 0;
-  }
-
-  .home-page .intro,
-  .home-page .intro .container,
-  .home-page .why-choose-us,
-  .home-page .home-highlights {
-    background-color: #e3e86f;
-  }
-
   .intro h2 {
     font-size: 2.4rem;
   }
@@ -636,9 +623,8 @@ footer {
   }
 
   .hero h1 {
-    font-size: clamp(2.05rem, 11vw, 2.75rem);
+    font-size: 2.35rem;
     line-height: 1.08;
-    margin-bottom: 1rem;
   }
 
   .hero-subtitle {
@@ -648,27 +634,21 @@ footer {
   }
 
   .hero-text {
-    margin: 1.35rem auto 1.75rem;
-    font-size: 1rem;
+    font-size: 1.05rem;
     text-align: center;
   }
 
   .hero-buttons {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 1rem;
   }
 
   .hero-buttons .btn,
   .hero-buttons .btn-secondary,
   .btn {
     min-width: 0;
-    width: min(100%, 280px);
+    width: min(100%, 180px);
     text-align: center;
-  }
-
-  .home-page .hero {
-    padding: 14.75rem 0 3.5rem;
   }
 
   .intro h2 {
