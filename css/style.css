@@ -399,6 +399,16 @@ footer {
     background-attachment: fixed;
   }
 
+  body.about-page,
+  body.inner-page {
+    background-color: #e3e86f;
+    background-image: url("../images/about/about_background.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   header {
     position: absolute;
     background-color: transparent;
@@ -1074,6 +1084,29 @@ footer {
     grid-row: auto;
   }
 
+  .experience-item > img,
+  .teaching-images img,
+  .about-gallery-grid img {
+    width: min(100%, 320px);
+    max-height: 180px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .about-intro-photo img {
+    width: min(46vw, 170px);
+    max-height: 220px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .about-feature-image img {
+    width: min(100%, 220px);
+    max-height: 280px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
   .about-links {
     text-align: center;
   }
@@ -1127,7 +1160,32 @@ footer {
   }
 
   .experience-item > img {
-    max-height: none;
+    width: min(100%, 320px);
+    max-height: 180px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .about-intro-photo img {
+    width: min(46vw, 170px);
+    max-height: 220px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .about-feature-image img {
+    width: min(100%, 220px);
+    max-height: 280px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .teaching-images img,
+  .about-gallery-grid img {
+    width: min(100%, 320px);
+    max-height: 180px;
+    margin: 0 auto;
+    object-fit: cover;
   }
 
   .about-intro-photo img,
@@ -1202,5 +1260,26 @@ footer {
     display: flex !important;
     grid-template-columns: none;
     gap: 0.45rem 0.75rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home-page .intro {
+    margin-top: 0;
+    padding-top: 2.5rem;
+  }
+
+  .home-page .site-header nav {
+    position: relative;
+    top: -8rem;
+    left: 50%;
+    width: min(100%, 680px);
+    transform: translateX(-50%);
+    z-index: 25;
+  }
+
+  .home-page .nav-list,
+  .home-page .nav-list.is-open {
+    justify-content: center;
   }
 }
