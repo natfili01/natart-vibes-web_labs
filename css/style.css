@@ -396,7 +396,7 @@ footer {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 
   body.about-page,
@@ -406,7 +406,7 @@ footer {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 
   header {
@@ -464,7 +464,7 @@ footer {
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 12rem 0 5rem;
     background-image: none;
     background-color: transparent;
