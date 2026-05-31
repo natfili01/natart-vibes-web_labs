@@ -137,18 +137,6 @@ header .container {
   color: #3f2340;
 }
 
-.home-page .site-header .menu-toggle {
-  display: inline-flex !important;
-}
-
-.home-page .site-header nav .nav-list:not(.is-open) {
-  display: none !important;
-}
-
-.home-page .site-header nav .nav-list.is-open {
-  display: flex !important;
-}
-
 .site-header nav {
   position: absolute;
   top: calc(100% + 0.9rem);
