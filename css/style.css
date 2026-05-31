@@ -1291,4 +1291,16 @@ footer {
   body *::after {
     color: #e3e86f !important;
   }
+
+  .btn,
+  .hero-buttons .btn,
+  .hero-buttons .btn-secondary,
+  .show-more-btn,
+  button[type="submit"] {
+    background-color: #e3e86f !important;
+    background-image: none !important;
+    border-color: #e3e86f !important;
+    color: #3f2340 !important;
+    box-shadow: none !important;
+  }
 }
