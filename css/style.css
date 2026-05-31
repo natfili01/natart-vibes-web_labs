@@ -1093,6 +1093,14 @@ footer {
     object-fit: cover;
   }
 
+  .artworks-gallery .about-gallery-grid img {
+    width: min(100%, 420px);
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
   .about-intro-photo img {
     width: min(46vw, 170px);
     max-height: 220px;
@@ -1198,6 +1206,14 @@ footer {
 
   .teaching-images {
     grid-template-columns: 1fr;
+  }
+
+  .artworks-gallery .about-gallery-grid img {
+    width: min(100%, 420px);
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 }
 
