@@ -1231,3 +1231,163 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  body.home-page {
+    background-color: #e3e86f;
+    background-image: url("../hero.jpeg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+
+  .home-page header,
+  .about-page header,
+  .inner-page header {
+    position: relative;
+    padding: 0.75rem 0 0;
+    background-color: transparent;
+  }
+
+  .home-page .site-header,
+  .about-page .site-header,
+  .inner-page .site-header {
+    gap: 0.75rem;
+  }
+
+  .home-page .logo,
+  .about-page .logo,
+  .inner-page .logo {
+    align-self: flex-start;
+    margin-left: 0;
+  }
+
+  .home-page .logo img,
+  .about-page .logo img,
+  .inner-page .logo img {
+    width: clamp(125px, 36vw, 155px);
+  }
+
+  .home-page .menu-toggle {
+    width: 100%;
+    min-height: 54px;
+    margin: 0;
+  }
+
+  .home-page .hero {
+    min-height: auto;
+    padding: 1.35rem 0 3rem;
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .home-page .hero .container {
+    top: auto;
+  }
+
+  .home-page .hero-subtitle,
+  .home-page .hero h1,
+  .home-page .hero-text {
+    color: #e3e86f;
+  }
+
+  .home-page .hero-subtitle {
+    margin-bottom: 0.9rem;
+    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+    letter-spacing: 0.12em;
+  }
+
+  .home-page .hero h1 {
+    max-width: 11ch;
+    margin: 0 auto 1.25rem;
+    font-size: clamp(2.25rem, 12vw, 3.05rem);
+    line-height: 1.08;
+  }
+
+  .home-page .hero-text {
+    max-width: 31ch;
+    margin: 0 auto 1.8rem;
+    font-size: clamp(1rem, 4.5vw, 1.15rem);
+    line-height: 1.55;
+  }
+
+  .home-page .hero-buttons {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  .home-page .hero-buttons .btn,
+  .home-page .hero-buttons .btn-secondary {
+    width: min(100%, 285px);
+    min-height: 64px;
+  }
+
+  .home-page .intro {
+    margin-top: 0;
+    padding-top: 2.75rem;
+  }
+
+  .home-page .intro,
+  .home-page .intro .container,
+  .home-page .why-choose-us,
+  .home-page .home-highlights {
+    background-color: #e3e86f;
+  }
+
+  .home-page .intro h2,
+  .home-page .intro p,
+  .home-page .section-intro,
+  .home-page .why-card h3,
+  .home-page .why-card p,
+  .home-page .highlight-card h3,
+  .home-page .highlight-card p {
+    color: #5a2a57;
+  }
+
+  body.about-page,
+  body.inner-page {
+    background-attachment: scroll;
+    color: #e3e86f;
+  }
+
+  .about-page .menu-toggle,
+  .inner-page .menu-toggle,
+  .about-page .nav-list a,
+  .inner-page .nav-list a,
+  .about-page .hero-subtitle,
+  .about-page h1,
+  .about-page .hero-text,
+  .inner-page .hero-subtitle,
+  .inner-page h1,
+  .inner-page .hero-text,
+  .inner-page .content-section h2,
+  .inner-page .content-section p,
+  .inner-page .soft-section h2,
+  .inner-page .soft-section p {
+    color: #e3e86f;
+  }
+
+  .about-page .menu-toggle,
+  .inner-page .menu-toggle {
+    border-color: #e3e86f;
+  }
+
+  body.about-page main *,
+  body.inner-page main * {
+    color: #e3e86f !important;
+  }
+
+  body.inner-page main input,
+  body.inner-page main select,
+  body.inner-page main textarea {
+    color: #341c33 !important;
+  }
+
+  .about-hero,
+  .page-hero {
+    padding-top: 2rem;
+  }
+}
