@@ -1657,8 +1657,13 @@ footer {
 
 @media (max-width: 600px) {
   .home-page .hero {
-    min-height: auto;
-    padding: 8rem 0 2.5rem;
+    min-height: 100dvh;
+    padding: 9rem 0 3rem;
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+    background-color: #e3e86f;
   }
 
   .home-page .hero .container {
@@ -1667,7 +1672,7 @@ footer {
 
   .home-page .hero-subtitle {
     margin-bottom: 0.8rem;
-    color: #5a2a57 !important;
+    color: #e3e86f !important;
     font-size: clamp(0.8rem, 3vw, 1.05rem);
     line-height: 1.2;
     letter-spacing: 0.16em;
@@ -1676,7 +1681,7 @@ footer {
   .home-page .hero h1 {
     max-width: 100%;
     margin-bottom: 1rem;
-    color: #5a2a57 !important;
+    color: #e3e86f !important;
     font-size: clamp(2rem, 9.8vw, 2.8rem);
     line-height: 1.05;
     overflow-wrap: normal;
@@ -1685,7 +1690,7 @@ footer {
   .home-page .hero-text {
     max-width: 100%;
     margin: 1.2rem auto 1.6rem;
-    color: #5a2a57 !important;
+    color: #e3e86f !important;
     font-size: clamp(1rem, 4.2vw, 1.2rem);
     line-height: 1.45;
   }
