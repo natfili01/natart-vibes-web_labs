@@ -1627,3 +1627,85 @@ footer {
     pointer-events: auto;
   }
 }
+
+@media (max-width: 1100px) {
+  .home-page .intro,
+  .home-page .intro .container,
+  .home-page .why-choose-us {
+    background-color: #e3e86f;
+  }
+
+  .home-page .home-highlights {
+    background-color: #dfe66b;
+  }
+
+  .home-page .why-card {
+    background-color: rgba(255, 255, 255, 0.28);
+  }
+
+  .home-page .intro h2,
+  .home-page .intro p,
+  .home-page .why-choose-us h2,
+  .home-page .section-intro,
+  .home-page .why-card h3,
+  .home-page .why-card p,
+  .home-page .highlight-card h3,
+  .home-page .highlight-card p {
+    color: #5a2a57 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-page .hero {
+    min-height: auto;
+    padding: 8rem 0 2.5rem;
+  }
+
+  .home-page .hero .container {
+    top: 0;
+  }
+
+  .home-page .hero-subtitle {
+    margin-bottom: 0.8rem;
+    color: #5a2a57 !important;
+    font-size: clamp(0.8rem, 3vw, 1.05rem);
+    line-height: 1.2;
+    letter-spacing: 0.16em;
+  }
+
+  .home-page .hero h1 {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    color: #5a2a57 !important;
+    font-size: clamp(2rem, 9.8vw, 2.8rem);
+    line-height: 1.05;
+    overflow-wrap: normal;
+  }
+
+  .home-page .hero-text {
+    max-width: 100%;
+    margin: 1.2rem auto 1.6rem;
+    color: #5a2a57 !important;
+    font-size: clamp(1rem, 4.2vw, 1.2rem);
+    line-height: 1.45;
+  }
+
+  .home-page .hero-buttons {
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .home-page .hero-buttons .btn,
+  .home-page .hero-buttons .btn-secondary {
+    width: min(44vw, 180px);
+    height: 56px;
+    min-width: 0;
+    color: #3f2340 !important;
+  }
+
+  .home-page .intro {
+    margin-top: 0;
+    padding-top: 2.5rem;
+  }
+}
