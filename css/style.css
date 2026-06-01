@@ -519,6 +519,22 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .home-page header {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    z-index: 30;
+  }
+
+  .home-page .site-header {
+    align-items: center;
+  }
+
+  .home-page .logo {
+    position: relative;
+    z-index: 31;
+  }
+
   .container {
     width: min(100%, calc(100% - 1.5rem));
   }
@@ -570,6 +586,17 @@ footer {
   .hero-text {
     font-size: 1.05rem;
     text-align: center;
+  }
+
+  .home-page .hero-subtitle,
+  .home-page .hero h1,
+  .home-page .hero-text {
+    color: #e3e86f !important;
+  }
+
+  .home-page .hero-buttons .btn,
+  .home-page .hero-buttons .btn-secondary {
+    color: #3f2340 !important;
   }
 
   .hero-buttons {
