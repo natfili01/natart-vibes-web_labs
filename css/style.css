@@ -599,6 +599,64 @@ footer {
     color: #3f2340 !important;
   }
 
+  .home-page header .container {
+    width: calc(100% - 3rem);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .home-page .logo {
+    margin-left: 25px;
+  }
+
+  .home-page .logo img {
+    width: 180px;
+  }
+
+  .home-page .hero {
+    background-image: url("../images/hero.jpg");
+    background-size: 100% auto;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+  }
+
+  .home-page .hero .container {
+    top: -90px;
+  }
+
+  .home-page .hero-subtitle {
+    margin-bottom: 1.4rem;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    letter-spacing: 0.22em;
+  }
+
+  .home-page .hero h1 {
+    max-width: 1200px;
+    margin-bottom: 1.25rem;
+    font-size: clamp(2.8rem, 4.2vw, 4.6rem);
+    line-height: 0.95;
+  }
+
+  .home-page .hero-text {
+    max-width: 900px;
+    margin: 1.8rem auto 2.4rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .home-page .hero-buttons {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .home-page .hero-buttons .btn,
+  .home-page .hero-buttons .btn-secondary {
+    width: 220px;
+    height: 64px;
+    padding: 0;
+  }
+
   .hero-buttons {
     flex-direction: row;
     align-items: center;
