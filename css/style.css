@@ -1657,13 +1657,23 @@ footer {
 
 @media (max-width: 600px) {
   .home-page .hero {
-    min-height: 100dvh;
-    padding: 9rem 0 3rem;
+    min-height: auto;
+    padding: 9rem 0 2rem;
     background-image: url("../images/hero.jpg");
     background-size: cover;
-    background-position: center 50%;
+    background-position: center top;
     background-repeat: no-repeat;
     background-color: #e3e86f;
+  }
+
+  .home-page header .container {
+    width: calc(100% - 1.5rem);
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  .home-page .logo {
+    margin-left: 0;
   }
 
   .home-page .hero .container {
