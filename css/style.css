@@ -1285,6 +1285,11 @@ footer {
     padding-top: 2.5rem;
   }
 
+  body.home-page {
+    background-size: contain;
+    background-position: center center;
+  }
+
   .home-page .site-header nav {
     position: relative;
     top: -8rem;
