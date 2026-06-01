@@ -388,13 +388,9 @@ footer {
 }
 
 @media (max-width: 1100px) {
-  body,
-  body.about-page,
-  body.inner-page {
-    background-color: #000000;
-    background-image: url("../hero.jpeg");
-    background-size: cover;
-    background-position: center center;
+  body.home-page {
+    background-color: #e3e86f;
+    background-image: none;
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
@@ -466,8 +462,11 @@ footer {
   .hero {
     min-height: 100dvh;
     padding: 12rem 0 5rem;
-    background-image: none;
-    background-color: transparent;
+    background-image: url("../images/hero.jpg");
+    background-size: 100% auto;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+    background-color: #e3e86f;
   }
 
   .hero .container {
@@ -501,12 +500,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .intro,
-  .intro .container,
-  .why-choose-us,
-  .home-highlights,
-  .highlight-card,
-  .why-card,
   .content-section,
   .soft-section,
   .page-hero,
