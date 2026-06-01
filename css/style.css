@@ -1674,6 +1674,11 @@ footer {
 
   .home-page .logo {
     margin-left: 0;
+    transform: translateX(-0.5rem);
+  }
+
+  .home-page .logo img {
+    width: 156px;
   }
 
   .home-page .hero .container {
