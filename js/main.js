@@ -1,6 +1,9 @@
 const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
 const navList = document.querySelector(".nav-list");
 const navLinks = document.querySelectorAll(".nav-list a");
+const menuClose = document.querySelector(".menu-close");
+const menuOverlay = document.querySelector(".menu-overlay");
 const currentDateElements = document.querySelectorAll(".current-date");
 const showMoreButton = document.querySelector(".show-more-btn");
 const contactForm = document.querySelector(".contact-form");
@@ -9,6 +12,7 @@ const calculatedPaymentInput = document.querySelector(".calculated-payment-input
 const stripePaymentLink = document.querySelector(".stripe-payment-link");
 
 let pageFontSize = Number(localStorage.getItem("pageFontSize")) || 100;
+let menuCloseTimer;
 
 const applyFontSize = () => {
   document.documentElement.style.fontSize = `${pageFontSize}%`;
@@ -17,17 +21,62 @@ const applyFontSize = () => {
 
 applyFontSize();
 
-if (menuToggle && navList) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = navList.classList.toggle("is-open");
-    const menuToggleLabel = menuToggle.querySelector(".menu-toggle-label");
+if (menuToggle && mainNav && navList && menuOverlay) {
+  const menuToggleLabel = menuToggle.querySelector(".menu-toggle-label");
+
+  const setMenuState = (isOpen) => {
+    window.clearTimeout(menuCloseTimer);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 
     if (menuToggleLabel) {
       menuToggleLabel.textContent = isOpen ? "Close" : "Menu";
-    } else {
-      menuToggle.textContent = isOpen ? "Close" : "Menu";
+    }
+
+    if (isOpen) {
+      menuOverlay.hidden = false;
+      requestAnimationFrame(() => {
+        mainNav.classList.add("is-open");
+        navList.classList.add("is-open");
+        menuOverlay.classList.add("is-open");
+        document.body.classList.add("nav-open");
+      });
+      return;
+    }
+
+    mainNav.classList.remove("is-open");
+    navList.classList.remove("is-open");
+    menuOverlay.classList.remove("is-open");
+    document.body.classList.remove("nav-open");
+    menuCloseTimer = window.setTimeout(() => {
+      menuOverlay.hidden = true;
+    }, 300);
+  };
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = !mainNav.classList.contains("is-open");
+    setMenuState(isOpen);
+  });
+
+  if (menuClose) {
+    menuClose.addEventListener("click", () => setMenuState(false));
+  }
+
+  menuOverlay.addEventListener("click", () => setMenuState(false));
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && mainNav.classList.contains("is-open")) {
+      setMenuState(false);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1100 && mainNav.classList.contains("is-open")) {
+      setMenuState(false);
     }
   });
 }

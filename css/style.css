@@ -1380,3 +1380,172 @@ footer {
     color: #e3e86f !important;
   }
 }
+
+.menu-close,
+.menu-overlay {
+  display: none;
+}
+
+@media (max-width: 1099.98px) {
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  .site-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu-toggle,
+  .home-page .menu-toggle,
+  .about-page .menu-toggle,
+  .inner-page .menu-toggle {
+    display: inline-flex !important;
+    width: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    padding: 0;
+    border-color: currentColor;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  .menu-toggle-label {
+    display: none;
+  }
+
+  .menu-toggle-icon {
+    width: 24px;
+  }
+
+  .menu-toggle-icon span {
+    height: 3px;
+  }
+
+  .site-header nav.main-nav,
+  .home-page .site-header nav.main-nav,
+  .about-page .site-header nav.main-nav,
+  .inner-page .site-header nav.main-nav {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    z-index: 1001;
+    width: min(80vw, 320px) !important;
+    height: 100dvh;
+    margin: 0 !important;
+    padding: 5.25rem 1.2rem 2rem;
+    overflow-y: auto;
+    background-color: #e3e86f;
+    box-shadow: -18px 0 36px rgba(79, 43, 76, 0.24);
+    transform: translateX(100%) !important;
+    transition: transform 0.3s ease;
+  }
+
+  .site-header nav.main-nav.is-open,
+  .home-page .site-header nav.main-nav.is-open,
+  .about-page .site-header nav.main-nav.is-open,
+  .inner-page .site-header nav.main-nav.is-open {
+    transform: translateX(0) !important;
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #5a2a57;
+    border-radius: 999px;
+    background-color: transparent;
+    color: #5a2a57 !important;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    transition: transform 0.25s ease, color 0.25s ease, background-image 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .menu-close:hover,
+  .menu-close:focus-visible,
+  .menu-close:active {
+    transform: translateY(-1px);
+    border-color: rgba(79, 43, 76, 0.9);
+    background-image: linear-gradient(
+      to top,
+      rgba(79, 43, 76, 0.94) 0%,
+      rgba(79, 43, 76, 0.62) 50%,
+      rgba(79, 43, 76, 0) 100%
+    );
+    box-shadow: inset 0 -3px 0 #e3e86f;
+    color: #e3e86f !important;
+  }
+
+  .main-nav .nav-list,
+  .main-nav .nav-list.is-open,
+  .about-page .main-nav .nav-list,
+  .about-page .main-nav .nav-list.is-open,
+  .inner-page .main-nav .nav-list,
+  .inner-page .main-nav .nav-list.is-open {
+    display: flex !important;
+    width: 100% !important;
+    padding: 0 !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 0.55rem !important;
+  }
+
+  .main-nav .nav-list a,
+  .main-nav .nav-list.is-open a,
+  .about-page .main-nav .nav-list a,
+  .inner-page .main-nav .nav-list a {
+    display: flex;
+    align-items: center;
+    width: 100% !important;
+    min-height: 54px;
+    padding: 0.85rem 0.95rem 0.95rem !important;
+    color: #5a2a57 !important;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .main-nav .nav-list a:hover,
+  .main-nav .nav-list a:focus-visible,
+  .main-nav .nav-list a:active,
+  .main-nav .nav-list a.js-nav-hover {
+    background-color: transparent;
+    background-image: linear-gradient(
+      to top,
+      rgba(79, 43, 76, 0.94) 0%,
+      rgba(79, 43, 76, 0.68) 56%,
+      rgba(79, 43, 76, 0.18) 100%
+    );
+    box-shadow: inset 0 -3px 0 #e3e86f;
+    color: #e3e86f !important;
+    transform: translateY(-1px);
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: block;
+    background-color: rgba(18, 10, 18, 0.54);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .menu-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
